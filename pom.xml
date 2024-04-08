@@ -26,12 +26,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>com.microsoft.azure</groupId>
-			<artifactId>azure-functions-maven-plugin</artifactId>
-			<version>${azure.functions.maven.plugin.version}</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -39,24 +33,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>com.microsoft.azure</groupId>
-				<artifactId>azure-functions-maven-plugin</artifactId>
-				<version>${azure.functions.maven.plugin.version}</version>
-				<configuration>
-					<auth>
-						<type>service_principal</type>
-						<client>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</client>
-						<tenant>yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy</tenant>
-						<key>zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz</key>
-						<environment>azure</environment>
-					</auth>
-					<!-- function app name -->
-					<appName>${azure}</appName>
-					...
-				</configuration>
 			</plugin>
 
 		</plugins>
